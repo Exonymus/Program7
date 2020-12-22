@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  7.1_2
+//  Program7.1_2
 //
-//  Created by Игорь Аралин on 17.12.20.
+//  Created by Игорь Аралин on 22.12.20.
 //
 
 #include <iostream>
