@@ -93,9 +93,19 @@ string num_sum(string num1, string num2)
         if (((num1[i] == '1' && num2[i] == '0') || (num1[i] == '0' && num2[i] == '1')) && check == true) sum[i] = '0';
     }
     
+    if (sum[0] == '1')
+        for (int i = 1; i < sum.length(); i++)
+        if (sum[i] == '0') sum[i] = '1';
+            else sum[i] = '0';
+    
     int ans = 0;
     for (int i = 0; i <= 7; i++)
         ans += ((int) sum[i] - 48) * pow(2,(7-i));
+    
+    bool sign;
+    if (ans > 0) sign = true; else sign = false;
     sum = binary_code(ans);
+    if (sign == false) sum[0] = '1';
+        else sum[0] = '0';
     return sum;
 }
